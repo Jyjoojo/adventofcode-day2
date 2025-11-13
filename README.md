@@ -14,7 +14,8 @@ Python 3.11
 ```bash
 python main.py
 
-## 📂 Structure du projet
+````
+##📂 Structure du projet
 adventofcode-day2/
 ├── main.py              # Programme principal
 ├── util_fonctions.py    # Fonctions utilitaires (logique du puzzle)
