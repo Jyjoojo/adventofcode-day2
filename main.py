@@ -5,9 +5,16 @@ def main():
         matrix = [list(map(int, line.strip().split())) for line in f if line.strip()]
 
     # Comptage des rapports sûrs
+    # compteur = 0
+    # for row in matrix:
+    #     if is_safe(row):
+    #         compteur += 1
+
+    # print("Nombre de rapports sûrs :", compteur)
+
     compteur = 0
     for row in matrix:
-        if is_safe(row):
+        if is_safe_with_dampener(row):
             compteur += 1
 
     print("Nombre de rapports sûrs :", compteur)

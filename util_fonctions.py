@@ -12,3 +12,14 @@ def valid_differences(report):
 def is_safe(report):
     """Vérifie si un rapport est sûr."""
     return is_sorted(report) and valid_differences(report)
+
+def is_safe_with_dampener(report):
+    if is_safe(report):
+        return True
+    
+    for i in range(len(report)):
+        temp = report[:i] + report[i+1:]  
+        if is_safe(temp):
+            return True
+    return False
+            
